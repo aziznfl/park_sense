@@ -1,11 +1,11 @@
 //
-//  ParkingSession.swift
+//  ParkingService.swift
 //  Runner
 //
 //  Created by Aziz Nurfalah on 02/02/26.
 //
 
-class ParkingSession {
+class ParkingService {
     private let groupNameKey = "group.id.my.aziznfl.parking_start_time"
     private let parkingTimeKey = "parking_start_time"
     

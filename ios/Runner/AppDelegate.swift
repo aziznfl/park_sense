@@ -44,27 +44,24 @@ extension AppDelegate {
             switch call.method {
                 
             case "get_parking_start_time":
-                if let date = ParkingSession().get() {
+                if let date = ParkingService().get() {
                     result(date.timeIntervalSince1970)
                 } else {
                     result(nil)
                 }
                 
             case "set_parking_start_time":
-                let formatter = ISO8601DateFormatter()
-                formatter.formatOptions = [.withInternetDateTime, .withFractionalSeconds]
-                
                 guard
                     let args = call.arguments as? [String: Any],
                     let timestamp = args["timestamp"] as? Int
                 else {
-                    ParkingSession().set(date: nil)
+                    ParkingRepository().stop()
                     result(nil)
                     return
                 }
 
-                let date = Date(timeIntervalSince1970: TimeInterval(timestamp) / 1000)
-                ParkingSession().set(date: date)
+                let date = timestamp.toDate()
+                ParkingRepository().start(date: date)
                 result(nil)
                 
             default:

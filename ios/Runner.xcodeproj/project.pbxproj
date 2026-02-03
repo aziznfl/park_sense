@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 54;
+	objectVersion = 70;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -16,10 +16,11 @@
 		97C146FC1CF9000F007C117D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 97C146FA1CF9000F007C117D /* Main.storyboard */; };
 		97C146FE1CF9000F007C117D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 97C146FD1CF9000F007C117D /* Assets.xcassets */; };
 		97C147011CF9000F007C117D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 97C146FF1CF9000F007C117D /* LaunchScreen.storyboard */; };
-		F91AB1302F2B014B00DFB559 /* CarPlaySceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F91AB12F2F2B014400DFB559 /* CarPlaySceneDelegate.swift */; };
+		F90895F82F316B2F00F04F01 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F90895F72F316B2F00F04F01 /* WidgetKit.framework */; };
+		F90895FA2F316B2F00F04F01 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F90895F92F316B2F00F04F01 /* SwiftUI.framework */; };
+		F90896072F316B3100F04F01 /* ParkActivityExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = F90895F62F316B2F00F04F01 /* ParkActivityExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		F91AB1322F2B056200DFB559 /* CarPlay.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F91AB1312F2B056200DFB559 /* CarPlay.storyboard */; };
 		F99613C22F2C8B5300BE625C /* FlutterMethodChannelBridge.swift in Sources */ = {isa = PBXBuildFile; fileRef = F99613B82F2C837A00BE625C /* FlutterMethodChannelBridge.swift */; };
-		F9D6BB032F308BCA00038332 /* ParkingSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9D6BB022F308BB500038332 /* ParkingSession.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +30,13 @@
 			proxyType = 1;
 			remoteGlobalIDString = 97C146ED1CF9000F007C117D;
 			remoteInfo = Runner;
+		};
+		F90896052F316B3100F04F01 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 97C146E61CF9000F007C117D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F90895F52F316B2F00F04F01;
+			remoteInfo = ParkActivityExtension;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -41,6 +49,17 @@
 			files = (
 			);
 			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F908960D2F316B3100F04F01 /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 12;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				F90896072F316B3100F04F01 /* ParkActivityExtension.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		F99613B52F2C832300BE625C /* Embed ExtensionKit Extensions */ = {
@@ -79,25 +98,44 @@
 		A73370716B8CEB8A1EB9C133 /* Pods-RunnerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RunnerTests.debug.xcconfig"; path = "Target Support Files/Pods-RunnerTests/Pods-RunnerTests.debug.xcconfig"; sourceTree = "<group>"; };
 		B2C9883ED3BCE66367D8A0F6 /* Pods-Runner.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Runner.debug.xcconfig"; path = "Target Support Files/Pods-Runner/Pods-Runner.debug.xcconfig"; sourceTree = "<group>"; };
 		EEDC733C271B0772BC47D595 /* Pods-Runner.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Runner.release.xcconfig"; path = "Target Support Files/Pods-Runner/Pods-Runner.release.xcconfig"; sourceTree = "<group>"; };
-		F91AB12F2F2B014400DFB559 /* CarPlaySceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarPlaySceneDelegate.swift; sourceTree = "<group>"; };
+		F90895F62F316B2F00F04F01 /* ParkActivityExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = ParkActivityExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		F90895F72F316B2F00F04F01 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		F90895F92F316B2F00F04F01 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
 		F91AB1312F2B056200DFB559 /* CarPlay.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CarPlay.storyboard; sourceTree = "<group>"; };
 		F99613B82F2C837A00BE625C /* FlutterMethodChannelBridge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlutterMethodChannelBridge.swift; sourceTree = "<group>"; };
 		F9D6BA412F30308200038332 /* Runner.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Runner.entitlements; sourceTree = "<group>"; };
-		F9D6BB022F308BB500038332 /* ParkingSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParkingSession.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
-/* Begin PBXFileSystemSynchronizedRootGroup section */
-		F9D6BAEF2F30849F00038332 /* AppIntents */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			exceptions = (
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		F90896082F316B3100F04F01 /* PBXFileSystemSynchronizedBuildFileExceptionSet */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
 			);
-			explicitFileTypes = {
-			};
-			explicitFolders = (
-			);
-			path = AppIntents;
-			sourceTree = "<group>";
+			target = F90895F52F316B2F00F04F01 /* ParkActivityExtension */;
 		};
+		F90896242F3191CA00F04F01 /* PBXFileSystemSynchronizedBuildFileExceptionSet */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				ParkActivityAttributes.swift,
+			);
+			target = 97C146ED1CF9000F007C117D /* Runner */;
+		};
+		F90896682F31AC8700F04F01 /* PBXFileSystemSynchronizedBuildFileExceptionSet */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				"Date+Ext.swift",
+				"Int+Ext.swift",
+			);
+			target = 97C146ED1CF9000F007C117D /* Runner */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		F90895E52F31697600F04F01 /* Extensions */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = Extensions; sourceTree = "<group>"; };
+		F90895FB2F316B2F00F04F01 /* ParkActivity */ = {isa = PBXFileSystemSynchronizedRootGroup; exceptions = (F90896242F3191CA00F04F01 /* PBXFileSystemSynchronizedBuildFileExceptionSet */, F90896082F316B3100F04F01 /* PBXFileSystemSynchronizedBuildFileExceptionSet */, ); explicitFileTypes = {}; explicitFolders = (); path = ParkActivity; sourceTree = "<group>"; };
+		F90896672F31AC7C00F04F01 /* CoreExtension */ = {isa = PBXFileSystemSynchronizedRootGroup; exceptions = (F90896682F31AC8700F04F01 /* PBXFileSystemSynchronizedBuildFileExceptionSet */, ); explicitFileTypes = {}; explicitFolders = (); path = CoreExtension; sourceTree = "<group>"; };
+		F90896712F31CBE400F04F01 /* Data */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = Data; sourceTree = "<group>"; };
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +152,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				90CD7A8EE39733C5EFBE4B02 /* Pods_Runner.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F90895F32F316B2F00F04F01 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F90895FA2F316B2F00F04F01 /* SwiftUI.framework in Frameworks */,
+				F90895F82F316B2F00F04F01 /* WidgetKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -146,6 +193,8 @@
 			children = (
 				3C6F90BD51310DF93CCC5F93 /* Pods_Runner.framework */,
 				9819EB602DB6B604A8261EEE /* Pods_RunnerTests.framework */,
+				F90895F72F316B2F00F04F01 /* WidgetKit.framework */,
+				F90895F92F316B2F00F04F01 /* SwiftUI.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -164,8 +213,10 @@
 		97C146E51CF9000F007C117D = {
 			isa = PBXGroup;
 			children = (
+				F90896672F31AC7C00F04F01 /* CoreExtension */,
 				9740EEB11CF90186004384FC /* Flutter */,
 				97C146F01CF9000F007C117D /* Runner */,
+				F90895FB2F316B2F00F04F01 /* ParkActivity */,
 				97C146EF1CF9000F007C117D /* Products */,
 				331C8082294A63A400263BE5 /* RunnerTests */,
 				2DD8CD0459836320E087E82E /* Pods */,
@@ -178,6 +229,7 @@
 			children = (
 				97C146EE1CF9000F007C117D /* Runner.app */,
 				331C8081294A63A400263BE5 /* RunnerTests.xctest */,
+				F90895F62F316B2F00F04F01 /* ParkActivityExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -185,11 +237,10 @@
 		97C146F01CF9000F007C117D /* Runner */ = {
 			isa = PBXGroup;
 			children = (
-				F9D6BB012F308BB100038332 /* Core */,
-				F9D6BAEF2F30849F00038332 /* AppIntents */,
+				F90896712F31CBE400F04F01 /* Data */,
+				F90895E52F31697600F04F01 /* Extensions */,
 				F9D6BA412F30308200038332 /* Runner.entitlements */,
 				F99613B82F2C837A00BE625C /* FlutterMethodChannelBridge.swift */,
-				F91AB12F2F2B014400DFB559 /* CarPlaySceneDelegate.swift */,
 				97C146FA1CF9000F007C117D /* Main.storyboard */,
 				97C146FD1CF9000F007C117D /* Assets.xcassets */,
 				97C146FF1CF9000F007C117D /* LaunchScreen.storyboard */,
@@ -201,14 +252,6 @@
 				F91AB1312F2B056200DFB559 /* CarPlay.storyboard */,
 			);
 			path = Runner;
-			sourceTree = "<group>";
-		};
-		F9D6BB012F308BB100038332 /* Core */ = {
-			isa = PBXGroup;
-			children = (
-				F9D6BB022F308BB500038332 /* ParkingSession.swift */,
-			);
-			path = Core;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -243,21 +286,47 @@
 				97C146EB1CF9000F007C117D /* Frameworks */,
 				97C146EC1CF9000F007C117D /* Resources */,
 				9705A1C41CF9048500538489 /* Embed Frameworks */,
-				3B06AD1E1E4923F5004D2608 /* Thin Binary */,
 				1733FEE6897F61BE6428CF47 /* [CP] Embed Pods Frameworks */,
 				F99613B52F2C832300BE625C /* Embed ExtensionKit Extensions */,
+				F908960D2F316B3100F04F01 /* Embed Foundation Extensions */,
+				3B06AD1E1E4923F5004D2608 /* Thin Binary */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F90896062F316B3100F04F01 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				F90895E52F31697600F04F01 /* Extensions */,
+				F90896712F31CBE400F04F01 /* Data */,
+			);
+			name = Runner;
+			productName = Runner;
+			productReference = 97C146EE1CF9000F007C117D /* Runner.app */;
+			productType = "com.apple.product-type.application";
+		};
+		F90895F52F316B2F00F04F01 /* ParkActivityExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F90896092F316B3100F04F01 /* Build configuration list for PBXNativeTarget "ParkActivityExtension" */;
+			buildPhases = (
+				F90895F22F316B2F00F04F01 /* Sources */,
+				F90895F32F316B2F00F04F01 /* Frameworks */,
+				F90895F42F316B2F00F04F01 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			fileSystemSynchronizedGroups = (
-				F9D6BAEF2F30849F00038332 /* AppIntents */,
+				F90895FB2F316B2F00F04F01 /* ParkActivity */,
+				F90896672F31AC7C00F04F01 /* CoreExtension */,
 			);
-			name = Runner;
-			productName = Runner;
-			productReference = 97C146EE1CF9000F007C117D /* Runner.app */;
-			productType = "com.apple.product-type.application";
+			name = ParkActivityExtension;
+			packageProductDependencies = (
+			);
+			productName = ParkActivityExtension;
+			productReference = F90895F62F316B2F00F04F01 /* ParkActivityExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -278,6 +347,9 @@
 						CreatedOnToolsVersion = 7.3.1;
 						LastSwiftMigration = 1100;
 					};
+					F90895F52F316B2F00F04F01 = {
+						CreatedOnToolsVersion = 26.1;
+					};
 				};
 			};
 			buildConfigurationList = 97C146E91CF9000F007C117D /* Build configuration list for PBXProject "Runner" */;
@@ -295,6 +367,7 @@
 			targets = (
 				97C146ED1CF9000F007C117D /* Runner */,
 				331C8080294A63A400263BE5 /* RunnerTests */,
+				F90895F52F316B2F00F04F01 /* ParkActivityExtension */,
 			);
 		};
 /* End PBXProject section */
@@ -319,6 +392,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		F90895F42F316B2F00F04F01 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
@@ -330,9 +410,13 @@
 			inputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-Runner/Pods-Runner-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
+			inputPaths = (
+			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-Runner/Pods-Runner-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -431,9 +515,14 @@
 			files = (
 				F99613C22F2C8B5300BE625C /* FlutterMethodChannelBridge.swift in Sources */,
 				74858FAF1ED2DC5600515810 /* AppDelegate.swift in Sources */,
-				F9D6BB032F308BCA00038332 /* ParkingSession.swift in Sources */,
-				F91AB1302F2B014B00DFB559 /* CarPlaySceneDelegate.swift in Sources */,
 				1498D2341E8E89220040F4C2 /* GeneratedPluginRegistrant.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F90895F22F316B2F00F04F01 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -444,6 +533,11 @@
 			isa = PBXTargetDependency;
 			target = 97C146ED1CF9000F007C117D /* Runner */;
 			targetProxy = 331C8085294A63A400263BE5 /* PBXContainerItemProxy */;
+		};
+		F90896062F316B3100F04F01 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F90895F52F316B2F00F04F01 /* ParkActivityExtension */;
+			targetProxy = F90896052F316B3100F04F01 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -535,6 +629,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = id.my.aziznfl.parksenses;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "Runner/Runner-Bridging-Header.h";
@@ -720,6 +815,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = id.my.aziznfl.parksenses;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "Runner/Runner-Bridging-Header.h";
@@ -745,6 +841,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = id.my.aziznfl.parksenses;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "Runner/Runner-Bridging-Header.h";
@@ -752,6 +849,132 @@
 				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Release;
+		};
+		F908960A2F316B3100F04F01 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = G59FPGXEVL;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ParkActivity/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = ParkActivity;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 18.6;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MARKETING_VERSION = 1.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = id.my.aziznfl.parksenses.ParkActivity;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		F908960B2F316B3100F04F01 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = G59FPGXEVL;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ParkActivity/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = ParkActivity;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 18.6;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MARKETING_VERSION = 1.0;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = id.my.aziznfl.parksenses.ParkActivity;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		F908960C2F316B3100F04F01 /* Profile */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = G59FPGXEVL;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ParkActivity/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = ParkActivity;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 18.6;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MARKETING_VERSION = 1.0;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = id.my.aziznfl.parksenses.ParkActivity;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Profile;
 		};
 /* End XCBuildConfiguration section */
 
@@ -782,6 +1005,16 @@
 				97C147061CF9000F007C117D /* Debug */,
 				97C147071CF9000F007C117D /* Release */,
 				249021D4217E4FDB00AE95B9 /* Profile */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F90896092F316B3100F04F01 /* Build configuration list for PBXNativeTarget "ParkActivityExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F908960A2F316B3100F04F01 /* Debug */,
+				F908960B2F316B3100F04F01 /* Release */,
+				F908960C2F316B3100F04F01 /* Profile */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

@@ -14,7 +14,9 @@ struct StartParkingIntent: AppIntent {
     static var openAppWhenRun: Bool = true
     
     func perform() async throws -> some IntentResult {
-        ParkingSession().set(date: Date())
+        let date = Date()
+        ParkingRepository().start(date: date)
+        
         return .result()
     }
 }
