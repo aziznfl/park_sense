@@ -13,12 +13,12 @@ class ParkingRepositoryImpl implements ParkingRepository {
 
   @override
   Future<void> start(DateTime date) async {
-    await _service.setParkingTime(date);
+    await _service.setParkingTime();
   }
 
   @override
   Future<void> stop() async {
-    await _service.setParkingTime(null);
+    await _service.endParkingTime();
   }
 
   @override

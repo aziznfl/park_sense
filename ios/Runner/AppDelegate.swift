@@ -51,17 +51,16 @@ extension AppDelegate {
                 }
                 
             case "set_parking_start_time":
-                guard
-                    let args = call.arguments as? [String: Any],
-                    let timestamp = args["timestamp"] as? Int
-                else {
-                    ParkingRepository().stop()
+                ParkingRepository().start()
+                
+                if let date = ParkingService().get() {
+                    result(date.timeIntervalSince1970)
+                } else {
                     result(nil)
-                    return
                 }
-
-                let date = timestamp.toDate()
-                ParkingRepository().start(date: date)
+                
+            case "end_parking_start_time":
+                ParkingRepository().stop()
                 result(nil)
                 
             default:

@@ -1,6 +1,6 @@
 //
 //  ParkActivityAttributes.swift
-//  Runner
+//  ParkActivity
 //
 //  Created by Aziz Nurfalah on 03/02/26.
 //

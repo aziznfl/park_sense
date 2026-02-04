@@ -7,10 +7,11 @@ class SiriChannelService {
     return await _channel.invokeMethod<double>('get_parking_start_time');
   }
 
-  Future<void> setParkingTime(DateTime? date) async {
-    final args = date != null
-        ? {'timestamp': date.millisecondsSinceEpoch}
-        : null;
-    return await _channel.invokeMethod<void>('set_parking_start_time', args);
+  Future<double?> setParkingTime() async {
+    return await _channel.invokeMethod<double?>('set_parking_start_time');
+  }
+
+  Future<double?> endParkingTime() async {
+    return await _channel.invokeMethod<double?>('end_parking_start_time');
   }
 }

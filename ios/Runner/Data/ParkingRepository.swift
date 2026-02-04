@@ -18,7 +18,8 @@ class ParkingRepository {
         self.liveActivityManager = liveActivityManager
     }
     
-    func start(date: Date) {
+    func start() {
+        let date = Date.now
         parkingService.set(date: date)
         liveActivityManager.start(date: date)
         

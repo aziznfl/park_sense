@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 70;
+	objectVersion = 54;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -107,21 +107,21 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
-		F90896082F316B3100F04F01 /* PBXFileSystemSynchronizedBuildFileExceptionSet */ = {
+		F90896082F316B3100F04F01 /* Exceptions for "ParkActivity" folder in "ParkActivityExtension" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
 				Info.plist,
 			);
 			target = F90895F52F316B2F00F04F01 /* ParkActivityExtension */;
 		};
-		F90896242F3191CA00F04F01 /* PBXFileSystemSynchronizedBuildFileExceptionSet */ = {
+		F90896242F3191CA00F04F01 /* Exceptions for "ParkActivity" folder in "Runner" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
 				ParkActivityAttributes.swift,
 			);
 			target = 97C146ED1CF9000F007C117D /* Runner */;
 		};
-		F90896682F31AC8700F04F01 /* PBXFileSystemSynchronizedBuildFileExceptionSet */ = {
+		F90896682F31AC8700F04F01 /* Exceptions for "CoreExtension" folder in "Runner" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
 				"Date+Ext.swift",
@@ -132,10 +132,53 @@
 /* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
-		F90895E52F31697600F04F01 /* Extensions */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = Extensions; sourceTree = "<group>"; };
-		F90895FB2F316B2F00F04F01 /* ParkActivity */ = {isa = PBXFileSystemSynchronizedRootGroup; exceptions = (F90896242F3191CA00F04F01 /* PBXFileSystemSynchronizedBuildFileExceptionSet */, F90896082F316B3100F04F01 /* PBXFileSystemSynchronizedBuildFileExceptionSet */, ); explicitFileTypes = {}; explicitFolders = (); path = ParkActivity; sourceTree = "<group>"; };
-		F90896672F31AC7C00F04F01 /* CoreExtension */ = {isa = PBXFileSystemSynchronizedRootGroup; exceptions = (F90896682F31AC8700F04F01 /* PBXFileSystemSynchronizedBuildFileExceptionSet */, ); explicitFileTypes = {}; explicitFolders = (); path = CoreExtension; sourceTree = "<group>"; };
-		F90896712F31CBE400F04F01 /* Data */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = Data; sourceTree = "<group>"; };
+		F90895E52F31697600F04F01 /* Extensions */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+			);
+			explicitFileTypes = {
+			};
+			explicitFolders = (
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		F90895FB2F316B2F00F04F01 /* ParkActivity */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				F90896242F3191CA00F04F01 /* Exceptions for "ParkActivity" folder in "Runner" target */,
+				F90896082F316B3100F04F01 /* Exceptions for "ParkActivity" folder in "ParkActivityExtension" target */,
+			);
+			explicitFileTypes = {
+			};
+			explicitFolders = (
+			);
+			path = ParkActivity;
+			sourceTree = "<group>";
+		};
+		F90896672F31AC7C00F04F01 /* CoreExtension */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				F90896682F31AC8700F04F01 /* Exceptions for "CoreExtension" folder in "Runner" target */,
+			);
+			explicitFileTypes = {
+			};
+			explicitFolders = (
+			);
+			path = CoreExtension;
+			sourceTree = "<group>";
+		};
+		F90896712F31CBE400F04F01 /* Data */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+			);
+			explicitFileTypes = {
+			};
+			explicitFolders = (
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -322,8 +365,6 @@
 				F90896672F31AC7C00F04F01 /* CoreExtension */,
 			);
 			name = ParkActivityExtension;
-			packageProductDependencies = (
-			);
 			productName = ParkActivityExtension;
 			productReference = F90895F62F316B2F00F04F01 /* ParkActivityExtension.appex */;
 			productType = "com.apple.product-type.app-extension";
@@ -410,13 +451,9 @@
 			inputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-Runner/Pods-Runner-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
-			inputPaths = (
-			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-Runner/Pods-Runner-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
