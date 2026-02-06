@@ -5,7 +5,7 @@
 //  Created by Aziz Nurfalah on 03/02/26.
 //
 
-class ParkingRepository {
+class ParkingRepositoryImpl: ParkingRepository {
     private let parkingService: ParkingService
     private let locationService: LocationService
     private let liveActivityManager: LiveActivityManager
@@ -18,12 +18,16 @@ class ParkingRepository {
         self.liveActivityManager = liveActivityManager
     }
     
-    func start() {
+    func get() -> Date? {
+        parkingService.get()
+    }
+    
+    func start() async {
         let date = Date.now
         parkingService.set(date: date)
         liveActivityManager.start(date: date)
         
-        getLocationName()
+        await getLocationName()
     }
     
     func stop() {
@@ -34,13 +38,17 @@ class ParkingRepository {
         }
     }
     
-    private func getLocationName() {
+    // MARK: Private Methods
+    
+    private func getLocationName() async {
         locationService.requestLocation()
-        locationService.onGetLocationName = { locationName in
-            guard let locationName else { return }
+        locationService.onGetLocationName = { location in
+            guard let location else { return }
             
             Task { [weak self] in
-                await self?.liveActivityManager.updateLocation(locationName: locationName)
+                await self?.liveActivityManager.updateLocation(
+                    location: location
+                )
             }
         }
     }

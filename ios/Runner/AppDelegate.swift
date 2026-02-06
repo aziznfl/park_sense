@@ -9,31 +9,18 @@ import UIKit
     ) -> Bool {
         GeneratedPluginRegistrant.register(with: self)
         
-        setMethodChannel()
-        
-        return super.application(application, didFinishLaunchingWithOptions: launchOptions)
-    }
-    
-    override func application(
-        _ app: UIApplication,
-        open url: URL,
-        options: [UIApplication.OpenURLOptionsKey : Any] = [:]
-    ) -> Bool {
-        if url.host == "startParking" {
-            FlutterMethodChannelBridge.shared.invoke(
-                method: "startParking"
-            )
-            return true
+        DispatchQueue.main.async { [weak self] in
+            self?.setMethodChannel()
         }
         
-        return false
+        return super.application(application, didFinishLaunchingWithOptions: launchOptions)
     }
 }
 
 extension AppDelegate {
     fileprivate func setMethodChannel() {
         guard let controller = window?.rootViewController as? FlutterViewController
-        else { fatalError("RootViewController is not FlutterViewController") }
+        else { return }
         
         let channel = FlutterMethodChannel(
             name: "siri_channel",
@@ -44,23 +31,25 @@ extension AppDelegate {
             switch call.method {
                 
             case "get_parking_start_time":
-                if let date = ParkingService().get() {
+                if let date = GetParkingUseCase().exec() {
                     result(date.timeIntervalSince1970)
                 } else {
                     result(nil)
                 }
                 
             case "set_parking_start_time":
-                ParkingRepository().start()
-                
-                if let date = ParkingService().get() {
-                    result(date.timeIntervalSince1970)
-                } else {
-                    result(nil)
+                Task {
+                    await StartParkingUseCase().exec()
+                    
+                    if let date = ParkingService().get() {
+                        result(date.timeIntervalSince1970)
+                    } else {
+                        result(nil)
+                    }
                 }
                 
             case "end_parking_start_time":
-                ParkingRepository().stop()
+                StopParkingUseCase().exec()
                 result(nil)
                 
             default:

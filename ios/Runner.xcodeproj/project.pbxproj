@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 54;
+	objectVersion = 70;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -107,21 +107,21 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
-		F90896082F316B3100F04F01 /* Exceptions for "ParkActivity" folder in "ParkActivityExtension" target */ = {
+		F90896082F316B3100F04F01 /* PBXFileSystemSynchronizedBuildFileExceptionSet */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
 				Info.plist,
 			);
 			target = F90895F52F316B2F00F04F01 /* ParkActivityExtension */;
 		};
-		F90896242F3191CA00F04F01 /* Exceptions for "ParkActivity" folder in "Runner" target */ = {
+		F90896242F3191CA00F04F01 /* PBXFileSystemSynchronizedBuildFileExceptionSet */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
 				ParkActivityAttributes.swift,
 			);
 			target = 97C146ED1CF9000F007C117D /* Runner */;
 		};
-		F90896682F31AC8700F04F01 /* Exceptions for "CoreExtension" folder in "Runner" target */ = {
+		F90896682F31AC8700F04F01 /* PBXFileSystemSynchronizedBuildFileExceptionSet */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
 				"Date+Ext.swift",
@@ -132,53 +132,11 @@
 /* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
-		F90895E52F31697600F04F01 /* Extensions */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			exceptions = (
-			);
-			explicitFileTypes = {
-			};
-			explicitFolders = (
-			);
-			path = Extensions;
-			sourceTree = "<group>";
-		};
-		F90895FB2F316B2F00F04F01 /* ParkActivity */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			exceptions = (
-				F90896242F3191CA00F04F01 /* Exceptions for "ParkActivity" folder in "Runner" target */,
-				F90896082F316B3100F04F01 /* Exceptions for "ParkActivity" folder in "ParkActivityExtension" target */,
-			);
-			explicitFileTypes = {
-			};
-			explicitFolders = (
-			);
-			path = ParkActivity;
-			sourceTree = "<group>";
-		};
-		F90896672F31AC7C00F04F01 /* CoreExtension */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			exceptions = (
-				F90896682F31AC8700F04F01 /* Exceptions for "CoreExtension" folder in "Runner" target */,
-			);
-			explicitFileTypes = {
-			};
-			explicitFolders = (
-			);
-			path = CoreExtension;
-			sourceTree = "<group>";
-		};
-		F90896712F31CBE400F04F01 /* Data */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			exceptions = (
-			);
-			explicitFileTypes = {
-			};
-			explicitFolders = (
-			);
-			path = Data;
-			sourceTree = "<group>";
-		};
+		F90895FB2F316B2F00F04F01 /* ParkActivity */ = {isa = PBXFileSystemSynchronizedRootGroup; exceptions = (F90896242F3191CA00F04F01 /* PBXFileSystemSynchronizedBuildFileExceptionSet */, F90896082F316B3100F04F01 /* PBXFileSystemSynchronizedBuildFileExceptionSet */, ); explicitFileTypes = {}; explicitFolders = (); path = ParkActivity; sourceTree = "<group>"; };
+		F90896672F31AC7C00F04F01 /* CoreExtension */ = {isa = PBXFileSystemSynchronizedRootGroup; exceptions = (F90896682F31AC8700F04F01 /* PBXFileSystemSynchronizedBuildFileExceptionSet */, ); explicitFileTypes = {}; explicitFolders = (); path = CoreExtension; sourceTree = "<group>"; };
+		F90896712F31CBE400F04F01 /* Data */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = Data; sourceTree = "<group>"; };
+		F9D9B8EA2F3443CA00947AA0 /* Domain */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = Domain; sourceTree = "<group>"; };
+		F9D9B9B72F35930400947AA0 /* Extension */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = Extension; sourceTree = "<group>"; };
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -280,19 +238,20 @@
 		97C146F01CF9000F007C117D /* Runner */ = {
 			isa = PBXGroup;
 			children = (
+				F9D9B9B72F35930400947AA0 /* Extension */,
 				F90896712F31CBE400F04F01 /* Data */,
-				F90895E52F31697600F04F01 /* Extensions */,
+				F9D9B8EA2F3443CA00947AA0 /* Domain */,
 				F9D6BA412F30308200038332 /* Runner.entitlements */,
 				F99613B82F2C837A00BE625C /* FlutterMethodChannelBridge.swift */,
+				74858FAE1ED2DC5600515810 /* AppDelegate.swift */,
 				97C146FA1CF9000F007C117D /* Main.storyboard */,
-				97C146FD1CF9000F007C117D /* Assets.xcassets */,
 				97C146FF1CF9000F007C117D /* LaunchScreen.storyboard */,
+				F91AB1312F2B056200DFB559 /* CarPlay.storyboard */,
+				97C146FD1CF9000F007C117D /* Assets.xcassets */,
 				97C147021CF9000F007C117D /* Info.plist */,
 				1498D2321E8E86230040F4C2 /* GeneratedPluginRegistrant.h */,
 				1498D2331E8E89220040F4C2 /* GeneratedPluginRegistrant.m */,
-				74858FAE1ED2DC5600515810 /* AppDelegate.swift */,
 				74858FAD1ED2DC5600515810 /* Runner-Bridging-Header.h */,
-				F91AB1312F2B056200DFB559 /* CarPlay.storyboard */,
 			);
 			path = Runner;
 			sourceTree = "<group>";
@@ -340,8 +299,9 @@
 				F90896062F316B3100F04F01 /* PBXTargetDependency */,
 			);
 			fileSystemSynchronizedGroups = (
-				F90895E52F31697600F04F01 /* Extensions */,
 				F90896712F31CBE400F04F01 /* Data */,
+				F9D9B8EA2F3443CA00947AA0 /* Domain */,
+				F9D9B9B72F35930400947AA0 /* Extension */,
 			);
 			name = Runner;
 			productName = Runner;
@@ -451,9 +411,13 @@
 			inputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-Runner/Pods-Runner-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
+			inputPaths = (
+			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-Runner/Pods-Runner-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;

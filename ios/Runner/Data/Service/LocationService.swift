@@ -10,7 +10,7 @@ class LocationService: NSObject, CLLocationManagerDelegate {
     private let manager = CLLocationManager()
     private let geocoder = CLGeocoder()
 
-    var onGetLocationName: ((String?) -> Void)?
+    var onGetLocationName: ((ParkLocation?) -> Void)?
 
     override init() {
         super.init()
@@ -37,7 +37,13 @@ class LocationService: NSObject, CLLocationManagerDelegate {
                 return
             }
 
-            self.onGetLocationName?(placemark.name)
+            let coordinate = location.coordinate
+            let parkLocation = ParkLocation(
+                latitude: "\(coordinate.latitude)",
+                longitude: "\(coordinate.longitude)",
+                locationName: placemark.name ?? "Not Found"
+            )
+            self.onGetLocationName?(parkLocation)
         }
     }
 

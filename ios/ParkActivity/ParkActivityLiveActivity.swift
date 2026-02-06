@@ -13,28 +13,64 @@ struct ParkActivityLiveActivity: Widget {
     var body: some WidgetConfiguration {
         ActivityConfiguration(for: ParkActivityAttributes.self) { context in
             let date = context.state.date
+            let locationName = context.state.location?.locationName
             
             VStack(alignment: .leading) {
                 Text("Park Sense").bold()
                 
-                ParkActivityBody(date: date, locationName: context.state.locationName)
+                ParkActivityBody(date: date, locationName: locationName)
             }
             .padding()
         } dynamicIsland: { context in
             let date = context.state.date
+            let locationName = context.state.location?.locationName
             
             return DynamicIsland {
-                DynamicIslandExpandedRegion(.leading) {
-                    Text("Park Sense")
-                        .font(.headline)
+                DynamicIslandExpandedRegion(.leading, priority: 1) {
+                    Text("Park Sense").bold()
                 }
+                
                 DynamicIslandExpandedRegion(.bottom) {
-                    ParkActivityBody(date: date, locationName: context.state.locationName)
+                    ParkActivityBody(date: date, locationName: locationName)
                 }
+                
+//                DynamicIslandExpandedRegion(.leading) {
+//                    VStack(alignment: .leading) {
+//                        Text("Duration:")
+//                            .font(.caption)
+//                            .foregroundColor(Color(uiColor: UIColor.systemGray2))
+//                        
+//                        Text(date, style: .timer)
+//                    }
+//                }
+//                
+//                DynamicIslandExpandedRegion(.trailing) {
+//                    VStack(alignment: .trailing) {
+//                        Text("Location:")
+//                            .font(.caption)
+//                            .foregroundColor(Color(uiColor: UIColor.systemGray2))
+//                        
+//                        Text(locationName ?? "Not Found")
+//                            .multilineTextAlignment(.trailing)
+//                            .lineLimit(1)
+//                    }
+//                    .dynamicIsland(verticalPlacement: .belowIfTooWide)
+//                }
             } compactLeading: {
-                Text("P")
+                VStack(alignment: .leading) {
+                    Image(systemName: "stopwatch.fill").foregroundColor(.blue)
+                    
+                    Text(date, style: .timer)
+                }
             } compactTrailing: {
-                Text("S")
+                VStack(alignment: .trailing) {
+                    Image(systemName: "mappin.and.ellipse").foregroundColor(.blue)
+                    
+                    Text(locationName ?? "Not Found")
+                        .font(.caption)
+                        .lineLimit(2)
+                        .multilineTextAlignment(.trailing)
+                }
             } minimal: {
                 Text("PS")
             }
@@ -51,29 +87,33 @@ private struct ParkActivityBody: View {
     var body: some View {
         HStack(alignment: .bottom) {
             VStack(alignment: .leading) {
-                Text("Duration:").font(.caption)
+                Text("Duration:")
+                    .font(.caption)
+                    .foregroundColor(Color(uiColor: UIColor.systemGray2))
+                
                 Text(date, style: .timer)
             }
             
             Spacer()
             
             VStack(alignment: .trailing) {
-                Text("Location:").font(.caption)
+                Text("Location:")
+                    .font(.caption)
+                    .foregroundColor(Color(uiColor: UIColor.systemGray2))
                 
                 Group {
                     if let locationName {
                         Text(locationName)
-                            .font(.caption)
-                            .multilineTextAlignment(.trailing)
-                            .lineLimit(2)
                     } else {
-                        Text("Not found")
-                            .font(.caption)
-                            .italic()
+                        Text("Not Found").italic()
                     }
                 }
+                .font(.caption).bold()
+                .multilineTextAlignment(.trailing)
+                .lineLimit(2)
             }
         }
         .padding(.top, 4)
     }
 }
+

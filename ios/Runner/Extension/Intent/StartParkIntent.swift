@@ -1,8 +1,8 @@
 //
-//  StartParkingIntent.swift
+//  StartParkIntent.swift
 //  Runner
 //
-//  Created by Aziz Nurfalah on 02/02/26.
+//  Created by Aziz Nurfalah on 05/02/26.
 //
 
 import AppIntents
@@ -13,8 +13,8 @@ struct StartParkingIntent: AppIntent {
     
     static var openAppWhenRun: Bool = true
     
-    func perform() async throws -> some IntentResult {
-        ParkingRepository().start()
-        return .result()
+    func perform() async throws -> some IntentResult & ProvidesDialog {
+        await StartParkingUseCase().exec()
+        return .result(dialog: "Parking session started.")
     }
 }
